@@ -4,6 +4,8 @@
 //#include <cstdio>
 //#include "Register.h"
 //using namespace std;
+//#include <stdexcept>
+//#include <limits>
 //
 //string idRegister() {//用户创建，ID输入函数
 //	string id = "";

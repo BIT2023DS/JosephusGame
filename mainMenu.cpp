@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include "link.h"
+#include <stdexcept>
+#include <limits>
 
 
 user* login(LinkedList &L1) {
@@ -11,7 +13,7 @@ user* login(LinkedList &L1) {
 		string choiceTemp;
 		cin >> choiceTemp;//此处缺少合法性检测
 		if (!isChoice(choiceTemp)) {
-			//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
+			cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 			cout << "-----------------------------------" << endl;
 			cout << "请重新输入，只能输入1或者2" << endl;
 		}
@@ -21,7 +23,7 @@ user* login(LinkedList &L1) {
 		}
 	}
 	
-	//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
+	cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 	if (choice == 1) {
 		//mainMenu(L1);
 	}
@@ -42,17 +44,17 @@ user* login(LinkedList &L1) {
 				}
 				if (temp == ' ') {//检测空格
 					cout << "ID输入错误，请重新输入ID！" << endl;
-					//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
+					cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 					continue;
 				}
 				idTemp = idTemp + temp;
 				if (idTemp.size() > 20) {//检测大小
 					cout << "ID输入错误，请重新输入ID！" << endl;
-					//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
+					cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 					continue;
 				}
 			}
-			//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
+			cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 			user* findUser = L1.find(id);
 			if (findUser != NULL) { //验证是否找到ID
 				cout << "-----------------------------------" << endl;
@@ -102,7 +104,7 @@ void mainMenu(LinkedList& userlist) {
 		cout << "输入错误，请重新输入!" << endl;
 		cout << "-----------------------------------" << endl;
 	}
-	//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
+	cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 	
 	if (stoi(in) == 1) {
 		//userlist.print();
@@ -163,7 +165,7 @@ bool isMenu(string s) { //判断是否为整型
 
 bool isChoice(string s) { //判断是否为整型
 	if (s.length() != 1) {
-		//cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+		cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
 		return false;
 	}
 
