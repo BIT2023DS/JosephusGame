@@ -1,3 +1,6 @@
+#ifndef MAINMENU
+#define MAINMENU
+
 #include <iostream>
 #include "link.h"
 #include <string>
@@ -12,3 +15,5 @@ bool isNum(string s);
 bool isMenu(string s);
 
 bool isChoice(string s);
+
+#endif

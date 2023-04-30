@@ -27,6 +27,7 @@ public:
     void remove(string id);
     user* find(string id);
     void print();
+    Node* getHead();
 private:
     Node* head;
 };

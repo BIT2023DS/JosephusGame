@@ -63,3 +63,7 @@
     		current = current ->next;
 		}
 	}
+
+    Node* LinkedList::getHead(){
+        return head;
+    }

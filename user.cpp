@@ -24,6 +24,10 @@ void user::userRegister() {
 	password = passwordRegister();
 }
 
+//for testing vvv
+user::user(string i,string n,string t,string e,int p,int s):id(i),name(n),teleNum(t),email(e),password(p),score(s){}
+//for testing ^^^
+
 string user::getId() {
 	return id;
 }
@@ -48,16 +52,11 @@ int user::getScore() {
 	return score;
 }
 
-
-
-
-
-
-string idRegister() {//用户创建，ID输入函数
+string idRegister() {//用户创建,ID输入函数
 	string id = "";
 	while (1) {
 		id = "";
-		cout << "请输入ID,ID最大长度为20个字符，不允许使用空格，只允许使用字母，数字，符号，输入完毕后摁Enter继续：" << endl;
+		cout << "请输入ID,ID最大长度为20个字符,不允许使用空格,只允许使用字母,数字,符号,输入完毕后摁Enter继续:" << endl;
 		char temp;
 		int flag = 0;
 		while (1) {
@@ -67,14 +66,14 @@ string idRegister() {//用户创建，ID输入函数
 				break;
 			}
 			if (temp == ' ') {//检测空格
-				cout << "ID输入不合法，请重新输入ID！" << endl;
+				cout << "ID输入不合法,请重新输入ID！" << endl;
 				cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 				flag++;
 				break;
 			}
 			id = id + temp;
 			if (id.size() > 20) {//检测大小
-				cout << "ID输入不合法，请重新输入ID！" << endl;
+				cout << "ID输入不合法,请重新输入ID！" << endl;
 				cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 				flag++;
 				break;
@@ -92,7 +91,7 @@ string nameRegister() {
 	string name = "";
 	while (1) {
 		name = "";
-		cout << "请输入名字,名字最大长度为20个字符，不允许使用空格，只允许使用字母，数字，符号，输入完毕后摁Enter继续：" << endl;
+		cout << "请输入名字,名字最大长度为20个字符,不允许使用空格,只允许使用字母,数字,符号,输入完毕后摁Enter继续：" << endl;
 		char temp;
 		int flag = 0;
 		while (1) {
@@ -102,14 +101,14 @@ string nameRegister() {
 				break;
 			}
 			if (temp == ' ') {//检测空格
-				cout << "名字输入不合法，请重新输入名字！" << endl;
+				cout << "名字输入不合法,请重新输入名字！" << endl;
 				cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 				flag++;
 				break;
 			}
 			name = name + temp;
 			if (name.size() > 20) {//检测大小
-				cout << "名字输入不合法，请重新输入名字！" << endl;
+				cout << "名字输入不合法,请重新输入名字！" << endl;
 				cin.ignore(numeric_limits<std::streamsize>::max(), '\n');//清空输入缓存区
 				flag++;
 				break;
@@ -135,7 +134,7 @@ string teleNumRegister() {
 			if (temp == '\n') {
 				//此处应有查重函数
 				if (teleNum.size() != 11) {//检查电话号码是否合法
-					cout << "电话号码输入不合法，请重新输入电话号码！" << endl;
+					cout << "电话号码输入不合法,请重新输入电话号码！" << endl;
 					flag++;
 				}
 				break;

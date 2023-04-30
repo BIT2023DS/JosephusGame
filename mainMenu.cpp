@@ -93,6 +93,7 @@ void mainMenu(LinkedList& userlist) {
 	cout << "登录请输入1。" << endl;
 	cout << "开户请输入2。" << endl;
 	cout << "退出请输入3。" << endl;
+
 	string in;
 	while (1) {
 		string temp;

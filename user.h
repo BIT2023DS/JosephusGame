@@ -16,6 +16,10 @@ protected:
 	int score;
 public:
 	user();//¹¹Ôìº¯Êý
+	//for testing vvv
+	user(string,string,string,string,int, int);
+	//for testing ^^^
+
 	void userRegister();
 	string getId();
 	string getName();
@@ -24,11 +28,6 @@ public:
 	int getPassword();
 	int getScore();
 };
-
-
-
-
-
 //Register.h
 string idRegister();
 string nameRegister();
