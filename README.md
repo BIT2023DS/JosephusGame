@@ -12,7 +12,11 @@ BIT 2023 Data Structure Project1 JosephusGame
 下面是具体方法：
 首先需要你进一个文件夹 
 
-git clone https://github.com/BIT2023DS/JosephusGame
+```
+git clone --recursive https://github.com/BIT2023DS/JosephusGame
+```
+
+因为用了其他的模型，有submodule,所以要recursive去clone module
 
 把项目拷贝到当前文件夹，在该文件夹下创建build文件夹（用来存储编译文件），然后进入build文件夹
 
@@ -30,8 +34,18 @@ make
 （在build文件夹下）
 
 ./JosephusGame 
-
 来运行程序
+
+```
+git clone --recursive https://github.com/BIT2023DS/JosephusGame
+cd JosephusGame
+mkdir build
+cd build 
+cmake ..
+make
+./JosephusGame
+```
+
 
 ### Debug in vscode
 USER MENU一级目录里面的CMakeLists.txt已经set
