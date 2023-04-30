@@ -35,7 +35,18 @@ make
 
 ./JosephusGame 
 来运行程序
+```
+git clone --recursive https://github.com/BIT2023DS/JosephusGame
+cd JosephusGame
+mkdir build
+cd build 
+cmake .. -G "MinGW Makefiles"
+make
+.\JosephusGame.exe
+```
+如果windows没有make命令，下载chocolatey，然后choco install make
 
+在linux系统下
 ```
 git clone --recursive https://github.com/BIT2023DS/JosephusGame
 cd JosephusGame
