@@ -27,8 +27,15 @@ cd build
 在build文件夹下
 
 
-(linux)cmake ..
-(windows)cmake .. -G "MinGW Makefiles"
+(linux)
+```
+cmake ..
+```
+
+(windows)
+```
+cmake .. -G "MinGW Makefiles"
+```
 
 //..表示告诉cmake从上一级文件夹中找我们的源文件和CMakelists.txt
 
